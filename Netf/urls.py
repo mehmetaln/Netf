@@ -25,11 +25,11 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('/', indexPage, name="indexPage" ),
-    path('browse', browsePage, name="browsePage"),
-    path('browseindex', browse_indexPage, name="browseindexPage"),
+    path('browse/', browsePage, name="browsePage"),
+    path('browseindex/', browse_indexPage, name="browseindexPage"),
     
     #USER
-    path('hesap', hesapPage, name="hesapPage"),
-    path('login', loginPage, name="loginPage"),
-    path('video', videoPage, name="videoPage"),
+    path('hesap/', hesapPage, name="hesapPage"),
+    path('login/', loginPage, name="loginPage"),
+    path('video/', videoPage, name="videoPage"),
 ] + static ( settings.MEDIA_URL, document_root = settings.MEDIA_ROOT )
