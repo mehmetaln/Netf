@@ -16,7 +16,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.views import *
 from appMy.views import *
 from appUser.views import *
 from django.conf import settings
@@ -24,12 +23,13 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('/', indexPage, name="indexPage" ),
-    path('browse/', browsePage, name="browsePage"),
-    path('browseindex/', browse_indexPage, name="browseindexPage"),
+    path('', indexPage, name="indexPage" ),
+    path('browsePage', browsePage, name="browsePage"),
+    path('profilPage', profilPage, name="profilPage"),
+    path('videoPage', videoPage, name="videoPage"),
+    path('hesapPage', hesapPage, name="hesapPage"),
     
     #USER
-    path('hesap/', hesapPage, name="hesapPage"),
-    path('login/', loginPage, name="loginPage"),
-    path('video/', videoPage, name="videoPage"),
+    path('loginPage', loginPage, name="loginPage"),
+    path('registerPage', registerPage, name="registerPage"),
 ] + static ( settings.MEDIA_URL, document_root = settings.MEDIA_ROOT )

@@ -2,10 +2,12 @@
 {% load static %}
 
 
-{% block body %}
+
+
+{% block nonheader %}
     <main>
-           <!-- Hero image -->
-    <div class="hero-image">
+    <!-- Hero image -->
+    <div class="hero-image" style="height: 700px;" >
         <!-- Navbar -->
         <nav class="navbar">
             <div class="container">
@@ -180,9 +182,8 @@
             </div>
         </div>
     </div>
-
     </main>
-{% endblock body %}
+{% endblock nonheader %}
     
  
 {% include '_footer.html' %}
