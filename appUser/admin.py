@@ -1,3 +1,11 @@
 from django.contrib import admin
+from appUser.models import *
 
-# Register your models here.
+
+@admin.register()
+class Admin(Profil):
+    '''Admin View for '''
+
+    list_display = ('user','title')
+    search_fields = ('title', 'user_username')
+

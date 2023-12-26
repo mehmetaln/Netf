@@ -5,6 +5,9 @@
 {% block head %}
     
     <style>
+        input{
+            color: #777 !important;
+        }
         h2 {
             text-align: left;
             font-weight: bold;
@@ -53,7 +56,7 @@
         <!-- navbar -->
         <nav class="navbar">
             <div class="container">
-                <a href="" class="navbar-brand"><img src="{% static 'img/netflix_logo.png' %}" alt=""></a>
+                <a href="/" class="navbar-brand"><img src="{% static 'img/netflix_logo.png' %}" alt=""></a>
             </div>
         </nav>
 
@@ -64,8 +67,8 @@
                 <h2>Oturum Aç</h2>
 
                 <div class="mb-3">
-                    <input name="username" type="text" class="form-control form-control-lg" placeholder="E-posta veya telefon numarası">
-                    <input type="password" name="password" id="" class="form-control form-control-lg mt-5">
+                    <input required name="username" type="text" class="form-control form-control-lg" placeholder="E-posta veya telefon numarası">
+                    <input required type="password" name="password" id="" class="form-control form-control-lg mt-5">
                 </div>
                 <div class="d-grid gap-2">
                     <button class="btn btn-danger btn-lg" type="submit">Oturum Aç</button>
