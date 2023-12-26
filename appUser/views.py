@@ -19,6 +19,7 @@ def videoPage(request):
 
 
 def loginPage(request):
+    
     context = {}
     return render(request,"user/login.html", context)
 
