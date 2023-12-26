@@ -20,23 +20,45 @@
                         </div>
                     </a>
                 </div>
-
+                
+                
+                <!-- Profil ekleme -->
                 <div class="col-3 mt-5 mb-5">
-                    <a href="browse-index.html" class="text-decoration-none text-secondary">
+                    <a href="{% url 'browsePage' %}" class="text-decoration-none text-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <div class="card bg-transparent">
-                            <div class="w-100 h-100 text-center" style="font-size: 10rem;"></div>
+                            <div class="w-100 h-100 text-center" style="font-size: 9rem;">+</div>
                             <div>
-                                <h5 class="card-title text-center ">Tugay</h5>
+                                <h5 class="card-title text-center "></h5>
                             </div>
                         </div>
-                    </a>
+                    </a>              
+                 <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Profil Oluştur</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <form method="POST">
+                                {% csrf_token %}
+                                <div class="modal-body">
+                                    <input type="text" class="form-control my-2" placeholder="Profil adı" name="title" id="">
+                                    <input type="file" class="form-control my-2" name="image" id="">                                
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                                    <button type="submit" class="btn btn-primary">Oluştur</button>
+                                </div>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
                 </div>
-
                 <div class="buton mb-5 text-center">
                     <button class="bg-dark text-secondary w-50 p-2 ">Profil Yönetimi</button>
                 </div>
             </div>
-        </div>
     </main>
     
 {% endblock nonheader %}
