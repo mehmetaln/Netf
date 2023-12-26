@@ -25,6 +25,9 @@ body, html {
     font-size: 5vw; /* vh = viewport-height  vw = viewport-width */
     font-weight: bold;
 }
+input{
+    color: #777 !important; 
+}
 
 .input-group input {
     padding: 20px;
